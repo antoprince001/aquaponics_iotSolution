@@ -1,4 +1,4 @@
-# aquaponics-web_iotsolution
+## Aquaponics Web IoT solution
 
 Aquaponics is a food production system that combines aquaculture with hydraponics. 
 
@@ -7,7 +7,7 @@ This web application acts a admin console to monitor the sensor readings of the 
 Backend: Flask framework
 Frontend: Html, CSS, Bootstrap
 
-Features
+# Features
 
   * Utilizes BoltIoT sensors to track the temperature and light intensity.
   
