@@ -1,0 +1,147 @@
+<html>
+<title>Temperature</title>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Login Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<style>
+    .whole{
+      background-color:#1cacd7;
+    }
+    #disp{
+     background-image: url('/static/img/fah.jpeg');
+     background-size: cover;
+     background-repeat: no-repeat;
+    
+    }
+
+    .col-md-8{
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/home">AQUAPONICS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/home"></a>
+        <a class="nav-item nav-link" href="/home">Home</a>
+        <a class="nav-item nav-link active" href="/dashboard">Dashboard</a>
+        <a class="nav-item nav-link" href="#">My Account</a>
+        <a class="nav-item nav-link" href="#">Info-zone</a>
+        {%for i in range(0, 30)%}
+        <a class="nav-item nav-link" href=""></a>
+        {%endfor%}
+
+        <a class="nav-item nav-link" href="/login">Login</a>
+
+      </div>
+    </div>
+  </nav>
+  
+
+  <br><br>
+        <div class="whole">
+
+           <center> <h1>Temperature</h1></center>
+
+        <!-- Card -->
+<div class=" card weather-card">
+
+          <!-- Card content -->
+          <div class="card-body pb-3">
+
+            <!-- Title -->
+            <center>
+              <h2 class="card-title font-weight-bold">Chennai, Tamil Nadu ,India</h2>
+            </center>
+            <!-- Text -->
+            <p class="card-text">
+              <h3>{{posts.month}}&nbsp;&nbsp;{{posts.day}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{posts.hour}}:{{posts.minute}}&nbsp;{{posts.zone}}
+              
+              </h3>
+            </p>
+
+
+            <div class="card" id='disp'>
+                <div class="card-body">
+                 
+            <div class="d-flex justify-content-between">
+              <p class="display-1 degree">CELSIUS:  {{posts.celsius[:5]}}&nbsp;C</p>
+              <i class="fas fa-sun-o fa-5x pt-3 amber-text"></i>
+            </div>
+            <br><br><br>
+            <div class="d-flex justify-content-between">
+                <p class="display-1 degree">FAHRENHEIT:  {{posts.fahrenheit[:5]}}&nbsp;F</p>
+                <i class="fas fa-sun-o fa-5x pt-3 amber-text"></i>
+              </div>
+              <br><br><br>
+              <div class="d-flex justify-content-between">
+                  <p class="display-1 degree">KELVIN:  {{posts.kelvin}}&nbsp;K</p>
+                  <i class="fas fa-sun-o fa-5x pt-3 amber-text"></i>
+                </div>
+                
+              </div>
+            </div>
+                <br><br><br>
+            <div class="progress md-progress">
+              <div class="progress-bar black" role="progressbar" style="width: {{posts.hour}}%" aria-valuenow="90%"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <ul class="list-unstyled d-flex justify-content-between font-small text-muted mb-4">
+              <li class="pl-4">8AM</li>
+              <li>11AM</li>
+              <li>2PM</li>
+              <li>5PM</li>
+              <li class="pr-4">8PM</li>
+            </ul>
+            
+
+          </div>
+
+          </div>
+          <!-- Card -->
+<br>
+          <center> <h1>Current Weather</h1></center>
+       
+          <br><br>
+          <center><div class="card mb-3" style="max-width: 540px;">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="/static/img/desc.jpeg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                   <h5>Chennai <br>
+                    
+                    <p class="card-text"><br>Description:&nbsp;{{posts.description}}</p>
+                    <p class="card-text">Humidity:&nbsp; {{posts.humidity}}</p>
+                    <p class="card-text">Pressure:&nbsp; {{posts.pressure}}</p>
+                  
+                  </h5>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </center>
+<br><br>
+      
+           </div>
+</body>
+
+</html>

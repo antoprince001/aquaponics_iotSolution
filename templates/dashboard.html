@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Aquaponics</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <style>
+
+    p,
+    ul {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: x-large;
+      letter-spacing: 3px;
+      font-style: oblique;
+      line-height: 150%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">AQUAPONICS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/home"></a>
+        <a class="nav-item nav-link" href="/home">Home </a>
+        <a class="nav-item nav-link active" href="/dashboard">Dashboard<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">My Account</a>
+        <a class="nav-item nav-link" href="#">Info-zone</a>
+        {%for i in range(0, 30)%} 
+        <a class="nav-item nav-link" href=""></a>
+        {%endfor%} 
+        <a class="nav-item nav-link" href="/login">Login</a>
+
+      </div>
+    </div>
+  </nav>
+
+  <br><br><br><br>
+
+  <div class='container'>
+    <div class='row'>
+      <div class='col' style='box-shadow: 40em;'>
+        
+          <br><br>
+          <center>
+            <div class="card" style="width: 20rem; height: 5rem; box-shadow: 20em;">
+              <img src="/static/img/thermometer.jpg" class="card-img-top" alt="..." height='300'>
+              <div class="card-body">
+                <h5 class="card-title">Temperature</h5>
+                <p class="card-text" style="font-size:larger">ML based prediction of required temperature for plant environment.</p>
+                <center><a href="/temperature" class="btn btn-primary">Monitor</a></center>
+              </div>
+            </div>
+
+          </center>
+       
+      </div>
+
+      <div class='col' style='box-shadow: 40em;'>
+        <br><br>
+        <center>
+          <div class="card" style="width: 20rem; height: 5rem; box-shadow: 20em;">
+            <img src="/static/img/sun.jpg" class="card-img-top" alt="..." height='300'>
+            <div class="card-body">
+              <h5 class="card-title">Luminous intensity</h5>
+              <p class="card-text" style="font-size:larger">Z-Score Analysis of Light Intensity for efficient simulation</p>
+              <center><a href="#" class="btn btn-primary">Monitor</a></center>
+            </div>
+          </div>
+        </center>
+      </div>
+
+    </div>
+  </diV>
+  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br>
+
+  <div class='container'>
+    <div class='row'>
+      
+
+      <div class='col'style='box-shadow: 40em;'>
+        <br><br>
+        <center>
+          <div class="card" style="width: 20rem; height: 5rem;">
+            <img src="/static/img/wat.jpeg" class="card-img-top" alt="..." height='300'>
+            <div class="card-body">
+              <h5 class="card-title">Water Quality</h5>
+              <p class="card-text" style="font-size:larger">Tracking of Chemical composition and water level in Aquaponics tanks.
+              </p>
+              <center><a href="#" class="btn btn-primary">Monitor</a></center>
+            </div>
+          </div>
+        </center>
+      </div>
+      <div class='col'style='box-shadow: 40em;'>
+          <br><br>
+          <center>
+            <div class="card" style="width: 20rem; height: 5rem;">
+              <img src="/static/img/forum.jpeg" class="card-img-top" alt="..." height='300' width='300'>
+              <div class="card-body">
+                <h5 class="card-title">Forum</h5>
+                <p class="card-text" style="font-size:larger">Interactive forum with proper resources for efficent handling of altercations.
+                </p>
+                <center><a href="#" class="btn btn-primary">Monitor</a></center>
+              </div>
+            </div>
+          </center>
+        </div>
+
+    </div>
+  </div>
+  
+  
+  
+</body>
+</body>
+
+</html>
