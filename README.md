@@ -1,3 +1,15 @@
 # aquaponics-web_iotsolution
 
-Dedicated website that utilizes sensors to collect temperature,light and water quality which is used to perform statistical analysis and predict future values that can help automate the parameters.
+Aquaponics is a food production system that combines aquaculture with hydraponics. 
+
+This web application acts a admin console to monitor the sensor readings of the farm.
+
+Backend: Flask framework
+Frontend: Html, CSS, Bootstrap
+
+Features
+
+  * Utilizes BoltIoT sensors to track the temperature and light intensity.
+  
+  * OpenWeatherAPI is used to gain insight about the weather conditions to help farmers.
+  
